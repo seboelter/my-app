@@ -6,7 +6,13 @@ import './App.css';
 class App extends Component{
   render(){
     //Takes infinite amount of elements, but at least 3, html, js, children
-    return React.createElement('div', null, React.createElement('h1', null, 'Does this work now?'));
+    //The .createElement is the exact same as the   
+    //     
+    // This is Jsx, syntactical sugar, because of build workflow
+  //     <div className="App">
+  //      <h1>Hi, I'm a React App</h1>
+  //     </div>
+    return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
 }
 
